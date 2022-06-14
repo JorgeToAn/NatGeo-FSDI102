@@ -4,18 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/337be747ec.js" crossorigin="anonymous"></script>
     <title>National Geographic</title>
 </head>
 <body>
-    <nav>
-        <img src="images/natgeo-logo.webp" alt="natgeo-logo">
-        <a href="#">Login</a>
-        <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-        <a href="#">Newsletters</a>
-        <a href="#">Subscribe</a>
-        <a href="#">Menu</a>
-        <a href="#"><i class="fa-solid fa-angles-down"></i></a>
+    <nav class="menu">
+        <div class="img-container">
+            <a class="desktop-logo" href="index.html"><img src="images/natgeo-logo.webp" alt="natgeo-logo"></a>
+            <a class="mobile-logo" href="index.html"><img src="images/natgeo-minilogo.png" alt="mobile-logo"></a>
+        </div>
+        <div class="link-container">
+            <a class="link-login" href="#">Login</a>
+            <a class="link-search" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a class="link-news" href="#">Newsletters</a>
+            <a class="link-subs" href="#">Subscribe</a>
+            <a class="link-menu" href="#">Menu</a>
+            <a class="link-arrows" href="#"><i class="fa-solid fa-angles-down"></i></a>
+        </div>
     </nav>
     <header>
         <h1>Latest Stories</h1>
@@ -35,6 +41,7 @@
             <p>31 archival photos that will ignite your curiosity</p>
             <p><i class="fa-solid fa-images"></i> See photos</p>
         </section>
+
         <section>
             <img src="images/thrash-art.webp" alt="Thrash art">
             <h3>Magazine <span>Proof</span></h3>

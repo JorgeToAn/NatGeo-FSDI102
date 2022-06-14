@@ -1,0 +1,106 @@
+/*GLOBAL*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Lato', sans-serif;
+    color: white;
+    background-color: black;
+}
+img{
+    max-width: 100%;
+}
+a{
+    text-decoration: none;
+}
+/*UTILITY*/
+
+/*MENU*/
+nav.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    background-color: white;
+}
+nav.menu a{
+    color: black;
+    margin-right: 26px;
+}
+.mobile-logo{
+    padding-left: 17px;
+}
+.mobile-logo img{
+    height: 32px;
+}
+.desktop-logo, .link-search, .link-news, .link-menu{
+    display: none;
+}
+.link-login{
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    transition: color 350ms;
+}
+.link-login:hover{
+    color: rgb(77, 77, 77);
+}
+nav.menu a.link-subs{
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    background-size: 200% 100%;
+    background-image: linear-gradient(to right, black 50%, gold 50%);
+    color: white;
+    padding: 15px 14px 13px 14px;
+    transition: background-position 350ms, color 350ms;
+}
+nav.menu a.link-subs:hover{
+    color: black;
+    background-position: -100% 0;
+}
+.link-arrows{
+    color: black;
+    transition: color 350ms;
+}
+.link-arrows:hover{
+    color:rgb(77, 77, 77);
+}
+/*HEADER*/
+header{
+    height: 250px;
+    text-align: center;
+}
+header h1{
+    text-transform: uppercase;
+    font-size: 42px;
+    font-weight: 900;
+    letter-spacing: 4px;
+    margin-top: 12px;
+}
+header p{
+    font-size: 16.3px;
+    font-weight: 500;
+    margin-top: 18px;
+    letter-spacing: 0.3px;
+}
+header p span{
+    border-bottom: 2px solid gold;
+    background-image: linear-gradient(to bottom, black 50%, gold 50%);
+    background-size: 100% 200%;
+    color: white;
+    transition: background-position 130ms ease-in, color 130ms;
+}
+header p span:hover{
+    background-position: 0 100%;
+    color: black;
+}
+header .line{
+    width: 30px;
+    border-bottom: 4px solid gold;
+    margin: 27px auto auto auto;
+}
