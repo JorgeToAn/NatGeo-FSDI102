@@ -15,14 +15,14 @@ img{
 a{
     text-decoration: none;
 }
-h1,h2,h3{
+h1,h2,h3,h4{
     text-transform: uppercase;
     letter-spacing: 3px;
 }
 h2{
     font-weight: 900;
 }
-h3{
+h3,h4{
     font-weight: 900;
     font-size: 13px;
 }
@@ -37,14 +37,14 @@ h3{
     width: 94%;
     margin: 10px auto;
 }
-span.swipe-highlight{
+.swipe-highlight{
     border-bottom: 2px solid gold;
     background-image: linear-gradient(to bottom, black 50%, gold 50%);
     background-size: 100% 200%;
     color: white;
     transition: background-position 130ms ease-in, color 130ms;
 }
-span.swipe-highlight:hover{
+.swipe-highlight:hover{
     background-position: 0 100%;
     color: black;
     cursor: pointer;
@@ -112,6 +112,48 @@ nav.menu a.link-subs:hover{
 .link-arrows:hover{
     color:rgb(77, 77, 77);
 }
+@media(min-width:768px){
+    .desktop-logo{
+        display: block;
+        padding-left: 17px;
+    }
+    .desktop-logo img{
+        height: 32px;
+    }
+    .mobile-logo{
+        display: none;
+    }
+    .link-search{
+        transition: color 350ms;
+    }
+    .link-search:hover{
+        color: rgb(77, 77, 77);
+    }
+    .link-news{
+        display: inline-block;
+        font-size: 14px;
+        border-bottom: 2px solid gold;
+    }
+    .link-news.swipe-highlight{
+        background-image: linear-gradient(to bottom, white 50%, gold 50%);
+        background-size: 100% 200%;
+        color: black;
+    }
+    .link-menu{
+        display: inline-block;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 900;
+        letter-spacing: 3px;
+        transition: color 350ms;
+    }
+    .link-menu:hover{
+        color: rgb(77, 77, 77);
+    }
+    .link-search{
+        display: inline-block;
+    }
+}
 /*HEADER*/
 header{
     height: 250px;
@@ -122,7 +164,7 @@ header h1{
     font-size: 42px;
     font-weight: 900;
     letter-spacing: 4px;
-    margin-top: 12px;
+    margin-top: 50px;
 }
 header p{
     font-size: 16.3px;
@@ -134,6 +176,24 @@ header .line{
     width: 30px;
     border-bottom: 4px solid gold;
     margin: 27px auto auto auto;
+}
+@media(min-width:768px){
+    header{
+        height: 200px;
+    }
+    header h1{
+        font-size: 54px;
+        margin-top: 100px;
+    }
+    header p{
+        font-size: 18px;
+        font-weight: 500;
+        margin-top: 24px;
+        letter-spacing: 0.6px;
+    }
+    header .line{
+        width: 60px;
+    }
 }
 
 /*MAIN-NEWS*/
@@ -149,7 +209,7 @@ header .line{
 .main-news-img{
     overflow: hidden;
 }
-.main-news-img img:hover{
+.main-news:hover .main-news-img img{
     transform: scale(1.1);
     cursor: pointer;
 }
@@ -163,6 +223,27 @@ header .line{
     font-weight: 900;
     margin: 15px 0 30px 0;
     word-spacing: 5px;
+}
+@media(min-width:768px){
+    main{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        column-gap: 40px;
+        margin: auto 20px;
+    }
+    .news-container{
+        display: flex;
+        flex-direction: column;
+        max-width: 650px;
+    }
+    .main-news{
+        height: 400px;
+        margin-bottom: 60px;
+    }
+    .main-news-img img{
+        height: 425px;
+    }
 }
 
 /*SECONDARY-NEWS*/
@@ -197,8 +278,26 @@ header .line{
 .secondary-news-text h3:hover{
     text-decoration: underline 2px;
 }
-.secondary-news-img img:hover{
+.secondary-news:hover .secondary-news-img img{
     transform: scale(1.1);
+}
+@media(min-width:768px){
+    .secondary-news-container{
+        display: flex;
+        column-gap: 40px;
+    }
+    .secondary-news{
+        height: 440px;
+    }
+    .secondary-news-img{
+        height: 230px;
+    }
+    .secondary-news-text{
+        height: 170px;
+    }
+    .secondary-news-text h3{
+        font-size: 12px;
+    }
 }
 
 /*TODAY'S PICKS*/
@@ -228,11 +327,22 @@ h2{
     margin-top: 10px;
     letter-spacing: 1px;
 }
-.pick-item-text h3{
+.pick-item-text h3,h4{
     font-weight: 900;
     font-size: 13px;
 }
-.pick-item-text p:hover{
+.pick-item-text h4{
+    text-align: center;
+}
+.pick-item:hover .pick-item-text p{
     text-decoration: underline 2px;
     cursor: pointer;
+}
+@media(min-width:768px){
+    .todays-picks-container{
+        max-width: 330px;
+    }
+    .pick-item{
+        margin: 10px 0 35px 2px;
+    }
 }
